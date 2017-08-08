@@ -1,0 +1,38 @@
+/**app.wxss**/
+page {
+  box-sizing: border-box;
+  font-size: 30rpx;
+  width: 100%;
+  height: 100%;
+}
+
+view,
+input {
+  box-sizing: border-box;
+}
+
+
+.index-profile {
+  width: 80%;
+  margin: 100rpx auto 60rpx auto;
+}
+
+.index-profile__img {
+  border-radius: 50%;
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.index-profile__nickname {
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.index-title {
+  font-size: 60rpx;
+  font-weight: 800;
+  text-align: center;
+}
