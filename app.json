@@ -5,7 +5,9 @@
     "pages/assistant/assistant",
     "pages/profile/profile",
     "pages/about/about",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/detail/detail",
+    "pages/gallery/gallery"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,51 @@
+<view class="page">
+  <view class="page__hd">
+    <!-- <view class="page__title">意见反馈</view>
+    <view class="page__desc">您的反馈让我们服务变得更好</view> -->
+  </view>
+  <view class="page__bd_spacing">
+    <form bindsubmit="submitGallery">
+    
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="这一刻的想法(可选)" style="height: 5em" name="textarea" />
+            <view class="weui-textarea-counter">0/200</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-uploader">
+        <view class="weui-uploader__hd">
+          
+          <view class="weui-uploader__info">{{files.length}}/2</view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+
+
+           
+            
+          
+            
+            <!-- <view class="weui-uploader__file weui-uploader__file_status">
+              <image class="weui-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+              <view class="weui-uploader__file-content">50%</view>
+            </view> -->
+          </view>
+          <view class="weui-uploader__input-box">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type="submit" type="primary">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,26 +1,56 @@
 //index.js
 //获取应用实例
+const wxParser = require('../../wxParser/index');
 
 var app = getApp()
 
 Page({
   data: {
-  
+
     profile: null,
     tableID: 373, // 从 https://cloud.minapp.com/dashboard/ 管理后台的数据表中获取
     bookList: null,
+    newsList: [],
     createBookValue: '',
     inputBook: '',
     editBookName: '',
     inputEditBook: '',
   },
-
+  contentDetail: function (event) {
+    console.log(event.currentTarget.dataset.contentId);
+    var contentId=event.currentTarget.dataset.contentId;
+    wx.navigateTo({
+      url: '../detail/detail?newsId='+contentId
+    })
+  },
   onLoad(options) {
+  
+
     this.setData({
       profile: app.getUserInfo()
     })
     this.fetchBookList()
+
+    this.fetchNewList();
   },
+
+  // 获取 bookList 数据
+  fetchNewList() {
+    let that = this
+    let content_group_id = 101;//新闻和公告分类id
+    let objects = {
+      content_group_id
+    }
+
+    wx.BaaS.getContentList(objects).then((res) => {
+      that.setData({
+        newsList: res.data.objects
+      })
+    }, (err) => {
+      console.dir(err)
+    });
+  },
+
 
   // 获取 bookList 数据
   fetchBookList() {
@@ -45,7 +75,7 @@ Page({
     this.setData({
       inputBook: value
     })
-  
+
   },
 
   createBook(e) {

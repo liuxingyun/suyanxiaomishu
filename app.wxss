@@ -1,5 +1,7 @@
 /**app.wxss**/
 @import 'style/weui.wxss';
+@import 'wxParser/index.wxss'
+@import 'content.wxss'
 page {
   box-sizing: border-box;
   font-size: 30rpx;

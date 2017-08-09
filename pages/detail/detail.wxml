@@ -1,0 +1,9 @@
+<!--index.wxml-->
+
+<import src="../../wxParser/index.wxml" />
+<view class="news-title">
+  {{newsTitle}}
+</view>
+<view class="wxParser">
+  <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+</view>
