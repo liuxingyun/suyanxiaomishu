@@ -1,0 +1,34 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">意见反馈</view>
+    <view class="page__desc">您的反馈让我们服务变得更好</view>
+  </view>
+  <view class="page__bd">
+    <form bindsubmit="submitFeedback">
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">反馈类型</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindCategoryChange" value="{{categoryIndex}}" range="{{categories}}" range-key="feed_category_name">
+            <view class="weui-select weui-select_in-select-after">{{categories[categoryIndex].feed_category_name}}</view>
+          </picker>
+        </view>
+      </view>
+
+
+
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="反馈内容(必填)" style="height: 5em"  name="textarea"/>
+            <view class="weui-textarea-counter">0/200</view>
+          </view>
+        </view>
+      </view>
+      <view class="weui-btn-area">
+        <button class="weui-btn"  form-type="submit" type="primary">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

@@ -1,7 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/profile/profile"
+    "pages/discuss/discuss",
+    "pages/assistant/assistant",
+    "pages/profile/profile",
+    "pages/about/about",
+    "pages/feedback/feedback"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,17 +13,32 @@
     "navigationBarTitleText": "我的书架",
     "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "list": [{
-      "pagePath": "pages/index/index",
-      "iconPath": "icons/home.png",
-      "selectedIconPath": "icons/home_highlight.png",
-      "text": "首页"
-    }, {
-      "pagePath": "pages/profile/profile",
-      "iconPath": "icons/setting.png",
-      "selectedIconPath": "icons/setting_highlight.png",
-      "text": "我的"
-    }]
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home_highlight.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/discuss/discuss",
+        "iconPath": "icons/setting.png",
+        "selectedIconPath": "icons/setting_highlight.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/assistant/assistant",
+        "iconPath": "icons/setting.png",
+        "selectedIconPath": "icons/setting_highlight.png",
+        "text": "助手"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "icons/setting.png",
+        "selectedIconPath": "icons/setting_highlight.png",
+        "text": "我的"
+      }
+    ]
   }
 }

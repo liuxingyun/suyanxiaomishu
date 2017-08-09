@@ -49,11 +49,11 @@ App({
   },
 
   getUserInfo() {
-    debugger;
+    
     if (this.userInfo) {
       return this.userInfo
     }
-    debugger;
+    
     this.userInfo = wx.BaaS.storage.get('userinfo')
     return this.userInfo
   }

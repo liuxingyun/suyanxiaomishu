@@ -1,0 +1,20 @@
+<view class="page">
+  <view class="page__hd">
+    <view class="weui-panel weui-panel_access">
+ 
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">苏研助手</view>
+          <view class="weui-media-box__desc">公司内部一个小秘书微信小程序，可以提供展示公司新闻和公告，租房、二手买卖，图书借阅等功能。</view>
+        </view>
+      </view>
+     
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">邮箱</view>
+          <view class="weui-media-box__desc">suyanzhushou@outlook.com</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
