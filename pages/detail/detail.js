@@ -14,19 +14,19 @@ Page({
     console.log(options);
     //测试渲染富文本
     let that = this;
-    var newsId = options.newsId;
+    var contentId = options.contentId;
     let html = ``;
     // 获取内容详情
-    debugger;
-    let richTextID = newsId;
+    
+    let richTextID = contentId;
     let objects = { richTextID };
     wx.BaaS.getContent(objects).then((res) => {
-      debugger;
+      
       that.setData({
         newsTitle: res.data.title
       })
       html = res.data.content;
-      debugger;
+      
       wxParser.parse({
         bind: 'richText',
         html: html,
