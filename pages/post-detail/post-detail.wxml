@@ -1,0 +1,13 @@
+<!--index.wxml-->
+
+<import src="../../wxParser/index.wxml" />
+<view class="news-title">
+  {{postTitle}}
+</view>
+<view class="wxParser">
+  <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+</view>
+
+<view wx:for="{{ imagePaths }}" wx:key="{{ index }}">
+  <image class="" src="{{item}}" />
+</view>

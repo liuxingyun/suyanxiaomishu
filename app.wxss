@@ -74,3 +74,9 @@ page{
     text-align: left;
     font-size: 14px;
 }
+
+/*组件样式*/
+swiper{
+    height:240px;
+    text-align:center;
+}

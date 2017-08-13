@@ -1,0 +1,63 @@
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="submitPost">
+
+
+      <view class="weui-cells__title">选择</view>
+      <view class="weui-cell weui-cell_select">
+        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+          <view class="weui-label">分类</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindCategoryChange" value="{{categoryIndex}}" range="{{categories}}" range-key="category_name">
+            <view class="weui-select weui-select_in-select-after">{{categories[categoryIndex].category_name}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">标题</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="title" placeholder="请输入帖子标题(必填）" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">帖子内容</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" placeholder="帖子内容(必填)" style="height: 8em" name="content" />
+            <view class="weui-textarea-counter">0/600</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">附件图片</view>
+
+      <view class="weui-uploader">
+        <view class="weui-uploader__hd">
+
+          <view class="weui-uploader__info">{{files.length}}/4</view>
+        </view>
+        <view class="weui-uploader__bd">
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+          </view>
+          <view class="weui-uploader__input-box" wx:if="{{maxNumber<4}}">
+            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type="submit" type="primary">确定</button>
+      </view>
+    </form>
+  </view>
+</view>

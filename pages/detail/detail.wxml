@@ -1,9 +1,24 @@
 <!--index.wxml-->
 
 <import src="../../wxParser/index.wxml" />
-<view class="news-title">
-  {{newsTitle}}
-</view>
-<view class="wxParser">
-  <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+
+
+
+<view class="page__bd">
+  <view class="weui-article">
+    <view class="weui-article__h1">{{newsTitle}}</view>
+    <view class="weui-article__section">
+
+      <view class="weui-article__section">
+
+        <view class="weui-article__p">
+          <view class="wxParser">
+            <template is="wxParser" data="{{wxParserData:richText.nodes}}" />
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+  </view>
 </view>

@@ -1,12 +1,18 @@
 var app = getApp();
-
 Page({
   data: {
+    categories: [],
+    categoryIndex: 0,
+    content: null,
     files: [],
     filePaths: [],
-    maxNumber: 0
+    maxNumber: 0,//上传图片计算
+    postCategoryTableId:597,
+    postTableID: 628//post表ID
   },
-
+  onLoad(options) {
+    this.fetchCategoryList()
+  },
   chooseImage: function (e) {
 
 
@@ -53,21 +59,52 @@ Page({
     })
   },
 
-  submitGallery: function (e) {
+
+  //bindCategoryChange
+  bindCategoryChange: function (e) {
+    console.log('picker category 发生选择改变，携带值为', e.detail.value);
+
+    this.setData({
+      categoryIndex: e.detail.value
+    })
+  },
+  //获取帖子分类列表
+  fetchCategoryList() {
+    let that = this
+    let tableID = this.data.postCategoryTableId
+    let objects = {
+      tableID
+    }
+
+    wx.BaaS.getRecordList(objects).then((res) => {
+      that.setData({
+        categories: res.data.objects
+      })
+    }, (err) => {
+      console.dir(err)
+    });
+  },
+
+  //添加帖子
+  submitPost: function (e) {
     let userId = app.getUserId();
 
-    let description = e.detail.value.description;
+    let title=e.detail.value.title;
+    let content = e.detail.value.content;
 
     let that = this;
-    let tableID = 548; //gallery表ID
+    let tableID = that.data.postTableID; //gallery表ID
 
 
-    let imagePaths = this.data.filePaths;
+    let imagePaths = that.data.filePaths;
+    let categoryId=that.data.categories[that.data.categoryIndex].id;
 
     let data = {
       user_id: userId,
+      title:title,
+      content:content,
       image_paths: imagePaths,
-      description: description
+      category_id: categoryId
     }
     let objects = {
       tableID,
@@ -77,18 +114,20 @@ Page({
     // 创建一个数据项
     wx.BaaS.createRecord(objects).then((res) => {
 
-      wx.showToast({
-        title: '提交成功',
-        icon: 'success',
-        duration: 2000
-      });
+      // wx.showToast({
+      //   title: '发布成功',
+      //   icon: 'success',
+      //   duration: 2000
+      // });
 
       wx.redirectTo({
-        url: '/pages/profile/profile'
+        url: '/pages/post/post'
       })
     }, (err) => {
       console.log(err)
     })
   },
+
+
 
 })

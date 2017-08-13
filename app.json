@@ -1,7 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/discuss/discuss",
+    "pages/post/post",
+    "pages/post-new/post-new",
+    "pages/post-detail/post-detail",
+    "pages/post-my/post-my",
     "pages/assistant/assistant",
     "pages/profile/profile",
     "pages/about/about",
@@ -24,15 +27,15 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/discuss/discuss",
-        "iconPath": "icons/setting.png",
-        "selectedIconPath": "icons/setting_highlight.png",
+        "pagePath": "pages/post/post",
+        "iconPath": "icons/discuss.png",
+        "selectedIconPath": "icons/discuss_hover.png",
         "text": "社区"
       },
       {
         "pagePath": "pages/assistant/assistant",
-        "iconPath": "icons/setting.png",
-        "selectedIconPath": "icons/setting_highlight.png",
+        "iconPath": "icons/assistant.png",
+        "selectedIconPath": "icons/assistant_hover.png",
         "text": "助手"
       },
       {

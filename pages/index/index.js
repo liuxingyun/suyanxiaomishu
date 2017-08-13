@@ -6,7 +6,11 @@ var app = getApp()
 
 Page({
   data: {
+    indicatorDots: true,
+    autoplay: true,
+    duration:500,
 
+    imgUrls:[],
     profile: null,
     tableID: 373, // 从 https://cloud.minapp.com/dashboard/ 管理后台的数据表中获取
     bookList: null,
@@ -29,9 +33,11 @@ Page({
     this.setData({
       profile: app.getUserInfo()
     })
-    this.fetchBookList()
+    //this.fetchBookList()
 
     this.fetchNewList();
+    this.fetchImageList();
+
   },
 
   // 获取 bookList 数据
@@ -52,17 +58,20 @@ Page({
   },
 
 
-  // 获取 bookList 数据
-  fetchBookList() {
-    let that = this
-    let tableID = this.data.tableID
+  // 获取首页gallery图片列表
+  fetchImageList() {
+    let that = this;
+    let tableID = 548;
     let objects = {
       tableID
     }
 
     wx.BaaS.getRecordList(objects).then((res) => {
+      var totalLength=res.data.objects.length;
+      var selectedIndex=Math.round(Math.random()*totalLength);
+      console.log(selectedIndex);
       that.setData({
-        bookList: res.data.objects // bookList array, mock data in mock/mock.js
+        imgUrls: res.data.objects[selectedIndex].image_paths
       })
     }, (err) => {
       console.dir(err)

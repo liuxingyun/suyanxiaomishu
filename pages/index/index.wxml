@@ -1,29 +1,50 @@
 <!--index.wxml-->
 <view class="index">
-  <view class="news-list">
-    <view class="news-item" wx:for="{{ newsList }}" wx:key="{{ index }}" bindtap="contentDetail" data-content-id="{{item.id}}">
-      <view class="news-image">
-        {{item.id}}
-      </view>
-      <view class="news-content">
-        <view class="news-title">
-          {{item.title}}
-        </view>
-        <view class="news-options">
-          <!-- <view class="readtimes">
-
-          </view>
-          <view class="comment-total">
-
-          </view> -->
-          <view class="publish-date">
-            {{item.created_at}}
-          </view>
-        </view>
-      </view>
-    </view>
+  <view class="weui-panel__hd">公司靓影</view>
+  <view class="weui-panel__bd">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="#cc3300">
+      <block wx:key="*this" wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" width="100%" />
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
-  <view class="index-todos">
+
+
+
+
+
+
+
+  <view class="news-list">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">新闻和公告</view>
+      <view class="weui-panel__bd" wx:for="{{ newsList }}" wx:key="{{ index }}">
+        <navigator url="/pages/detail/detail?contentId={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="https://media.ifanrusercontent.com/media/user_files/hydrogen/6a/36/6a369199833c1cebb6b84c5846fa1b8aa528ceff-9425e355fc72caa95825a21db00aabb45d3b40d9.jpg"
+            />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">{{item.title}}</view>
+            <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+          </view>
+        </navigator>
+
+      </view>
+      <!-- <view class="weui-panel__ft">
+        <view class="weui-cell weui-cell_access weui-cell_link">
+          <view class="weui-cell__bd">查看更多</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+        </view>
+      </view> -->
+    </view>
+
+
+    
+  </view>
+  <!-- <view class="index-todos">
     <view class="index-todos__showLayer">
       <view class="index-todos__item" wx:for="{{ bookList }}" wx:key="{{ index }}">
         <view class="index-todos__title">书目：</view>
@@ -50,5 +71,5 @@
         添加
       </button>
     </view>
-  </view>
+  </view> -->
 </view>

@@ -1,7 +1,7 @@
 var app = getApp();
 Page({
   data: {
-    title: '我的书架-v1.0版本',
+    title: 'V1.0.0',
     profile: null,
   },
 

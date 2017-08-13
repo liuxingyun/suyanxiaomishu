@@ -16,7 +16,7 @@
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
 
-      <navigator url="/pages/article/article" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <navigator url="/pages/post-my/post-my" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">我的帖子</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
