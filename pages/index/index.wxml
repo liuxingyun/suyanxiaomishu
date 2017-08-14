@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="index">
-  <view class="weui-panel__hd">公司靓影</view>
+  <view class="weui-panel__hd">公司印象</view>
   <view class="weui-panel__bd">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="#cc3300">
       <block wx:key="*this" wx:for="{{imgUrls}}">
@@ -23,12 +23,13 @@
       <view class="weui-panel__bd" wx:for="{{ newsList }}" wx:key="{{ index }}">
         <navigator url="/pages/detail/detail?contentId={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-            <image class="weui-media-box__thumb" src="https://media.ifanrusercontent.com/media/user_files/hydrogen/6a/36/6a369199833c1cebb6b84c5846fa1b8aa528ceff-9425e355fc72caa95825a21db00aabb45d3b40d9.jpg"
+            <image class="weui-media-box__thumb" src="https://media.ifanrusercontent.com/media/user_files/hydrogen/cb/4a/cb4a1bc4de9652150937927bbe84b2063973489e-70a7186519613af949ef83d79444e1c29679d2d6.png"
             />
           </view>
           <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
             <view class="weui-media-box__title">{{item.title}}</view>
-            <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <!-- <view class="weui-media-box__desc">{{item.content}}</view> -->
+            <view class="weui-media-box__info__meta">{{item.publishDate}}</view>
           </view>
         </navigator>
 
