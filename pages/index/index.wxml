@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="index">
+<view class="page">
   <view class="weui-panel__hd">公司印象</view>
   <view class="weui-panel__bd">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" duration="{{duration}}" indicator-active-color="#cc3300">

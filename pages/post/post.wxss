@@ -1,0 +1,7 @@
+.active .weui-grid__label{
+    color:#1296db;
+}
+.active{
+    background-color:#fff;
+    border:1px solid #1296db;
+}

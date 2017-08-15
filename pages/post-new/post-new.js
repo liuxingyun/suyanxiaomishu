@@ -7,7 +7,7 @@ Page({
     files: [],
     filePaths: [],
     maxNumber: 0,//上传图片计算
-    postCategoryTableId:597,
+    postCategoryTableId: 597,
     postTableID: 628//post表ID
   },
   onLoad(options) {
@@ -32,22 +32,25 @@ Page({
           maxNumber: that.data.maxNumber
         });
         //提交到后台
-        params.filePath = res.tempFilePaths[0];
-        wx.BaaS.uploadFile(params).then((res) => {
-          // success. 服务器成功响应
-          /* 注: 只要是服务器有响应的情况都会进入 success, 即便是 4xx，5xx 都会进入
-            这是微信的处理方式与 BaaS 服务(器)无关
-            如果上传成功则会返回资源远程地址
-            如果上传失败则会返回失败信息
-          */
-          console.log(res);
-          var imagePath = JSON.parse(res.data).path;
-          that.data.filePaths.push(imagePath);
-          // 目前开发者工具上传文件功能有 bug, 请务必使用设备进行操作，同时打开 console 观察结果
-        }, (err) => {
-          // 微信自身系统级别错误
-          console.dir(err);
-        })
+        for (var i = 0; i < res.tempFilePaths.length; i++) {
+          params.filePath = res.tempFilePaths[i];
+          wx.BaaS.uploadFile(params).then((res) => {
+            // success. 服务器成功响应
+            /* 注: 只要是服务器有响应的情况都会进入 success, 即便是 4xx，5xx 都会进入
+              这是微信的处理方式与 BaaS 服务(器)无关
+              如果上传成功则会返回资源远程地址
+              如果上传失败则会返回失败信息
+            */
+            console.log(res);
+            var imagePath = JSON.parse(res.data).path;
+
+            that.data.filePaths.push(imagePath);
+            // 目前开发者工具上传文件功能有 bug, 请务必使用设备进行操作，同时打开 console 观察结果
+          }, (err) => {
+            // 微信自身系统级别错误
+            console.dir(err);
+          })
+        }
 
       }
     })
@@ -89,7 +92,7 @@ Page({
   submitPost: function (e) {
     let userId = app.getUserId();
 
-    let title=e.detail.value.title;
+    let title = e.detail.value.title;
     let content = e.detail.value.content;
 
     let that = this;
@@ -97,12 +100,12 @@ Page({
 
 
     let imagePaths = that.data.filePaths;
-    let categoryId=that.data.categories[that.data.categoryIndex].id;
+    let categoryId = that.data.categories[that.data.categoryIndex].id;
 
     let data = {
       user_id: userId,
-      title:title,
-      content:content,
+      title: title,
+      content: content,
       image_paths: imagePaths,
       category_id: categoryId
     }

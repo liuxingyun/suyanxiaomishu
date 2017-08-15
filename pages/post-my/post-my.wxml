@@ -1,6 +1,6 @@
 <view class="page">
   <view class="page__bd">
-   
+
 
     <view class="weui-panel weui-panel_access">
       <view class="weui-panel__hd">我的帖子</view>
@@ -17,13 +17,13 @@
         </navigator>
 
       </view>
-       <view class="weui-panel__ft">
+      <!-- <view class="weui-panel__ft">
         <view class="weui-cell weui-cell_access weui-cell_link">
           <view class="weui-cell__bd">查看更多</view>
           <view class="weui-cell__ft weui-cell__ft_in-access"></view>
         </view>
-      </view> 
+      </view> -->
     </view>
-    
+
   </view>
 </view>

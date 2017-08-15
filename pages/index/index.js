@@ -9,16 +9,13 @@ Page({
     indicatorDots: true,
     autoplay: true,
     duration: 500,
-
     imgUrls: [],
+    
     profile: null,
     tableID: 373, // 从 https://cloud.minapp.com/dashboard/ 管理后台的数据表中获取
-    bookList: null,
+
     newsList: [],
-    createBookValue: '',
-    inputBook: '',
-    editBookName: '',
-    inputEditBook: '',
+
   },
   contentDetail: function (event) {
     console.log(event.currentTarget.dataset.contentId);

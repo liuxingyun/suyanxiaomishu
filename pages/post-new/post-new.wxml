@@ -36,24 +36,27 @@
 
       <view class="weui-cells__title">附件图片</view>
 
-      <view class="weui-uploader">
-        <view class="weui-uploader__hd">
+   
 
-          <view class="weui-uploader__info">{{files.length}}/4</view>
-        </view>
-        <view class="weui-uploader__bd">
-          <view class="weui-uploader__files" id="uploaderFiles">
-            <block wx:for="{{files}}" wx:key="*this">
-              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
-                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
-              </view>
-            </block>
+        <view class="weui-uploader">
+          <view class="weui-uploader__hd">
+
+            <view class="weui-uploader__info">{{files.length}}/4</view>
           </view>
-          <view class="weui-uploader__input-box" wx:if="{{maxNumber<4}}">
-            <view class="weui-uploader__input" bindtap="chooseImage"></view>
+          <view class="weui-uploader__bd">
+            <view class="weui-uploader__files" id="uploaderFiles">
+              <block wx:for="{{files}}" wx:key="*this">
+                <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                  <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                </view>
+              </block>
+            </view>
+            <view class="weui-uploader__input-box" wx:if="{{maxNumber<4}}">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
           </view>
         </view>
-      </view>
+  
 
       <view class="weui-btn-area">
         <button class="weui-btn" form-type="submit" type="primary">确定</button>

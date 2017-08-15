@@ -18,7 +18,8 @@ Page({
     let that = this
     let tableID = 563;//助手分类表ID
     let objects = {
-      tableID
+      tableID,
+      order_by:"order"
     }
 
     wx.BaaS.getRecordList(objects).then((res) => {

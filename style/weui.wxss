@@ -848,6 +848,7 @@ icon {
 .weui-media-box__info__meta {
   float: left;
   padding-right: 1em;
+  font-size:0.8em;
 }
 .weui-media-box__info__meta_extra {
   padding-left: 1em;
