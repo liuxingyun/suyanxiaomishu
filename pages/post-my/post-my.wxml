@@ -7,12 +7,13 @@
       <view class="weui-panel__bd" wx:for="{{ postList }}" wx:key="{{ index }}">
         <navigator url="/pages/post-detail/post-detail?postId={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-            <image class="weui-media-box__thumb" src="https://media.ifanrusercontent.com/media/user_files/hydrogen/6a/36/6a369199833c1cebb6b84c5846fa1b8aa528ceff-9425e355fc72caa95825a21db00aabb45d3b40d9.jpg"
+            <image class="weui-media-box__thumb" src="{{item.categoryImagePath}}"
             />
           </view>
           <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
             <view class="weui-media-box__title">{{item.title}}</view>
-            <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view>
+            <!-- <view class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</view> -->
+            <view class="weui-media-box__info__meta">{{item.publishDate}}</view>
           </view>
         </navigator>
 

@@ -117,15 +117,19 @@ Page({
     // 创建一个数据项
     wx.BaaS.createRecord(objects).then((res) => {
 
-      // wx.showToast({
-      //   title: '发布成功',
-      //   icon: 'success',
-      //   duration: 2000
-      // });
+      wx.showToast({
+        title: '发布成功',
+        icon: 'success',
+        duration: 2000
+      });
 
-      wx.redirectTo({
-        url: '/pages/post/post'
-      })
+      setTimeout(function () {
+        wx.switchTab({
+          url: '/pages/post/post'
+        });
+      }, 2000);
+
+
     }, (err) => {
       console.log(err)
     })

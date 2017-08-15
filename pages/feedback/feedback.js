@@ -53,13 +53,19 @@ Page({
 
     // 创建一个数据项
     wx.BaaS.createRecord(objects).then((res) => {
-      
+
       wx.showToast({
         title: '反馈成功',
         icon: 'success',
         duration: 2000
       });
-      e.detail.value.textarea="";
+      e.detail.value.textarea = "";
+      setTimeout(function () {
+        wx.switchTab({
+          url: '/pages/profile/profile'
+        });
+      }, 2000);
+
     }, (err) => {
       console.log(err)
     })

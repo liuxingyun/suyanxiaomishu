@@ -26,7 +26,7 @@ Page({
           maxNumber: that.data.maxNumber
         });
         //提交到后台
-        
+
         for (var i = 0; i < res.tempFilePaths.length; i++) {
           params.filePath = res.tempFilePaths[i];
           wx.BaaS.uploadFile(params).then((res) => {
@@ -88,9 +88,12 @@ Page({
         duration: 2000
       });
 
-      wx.redirectTo({
-        url: '/pages/profile/profile'
-      })
+      setTimeout(function () {
+        wx.switchTab({
+          url: '/pages/profile/profile'
+        });
+      }, 2000);
+      
     }, (err) => {
       console.log(err)
     })
