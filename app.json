@@ -30,7 +30,7 @@
         "pagePath": "pages/post/post",
         "iconPath": "icons/discuss.png",
         "selectedIconPath": "icons/discuss_hover.png",
-        "text": "社区"
+        "text": "服务"
       },
       {
         "pagePath": "pages/assistant/assistant",

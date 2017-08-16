@@ -5,7 +5,7 @@
       <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_text">
           <view class="weui-media-box__title weui-media-box__title_in-text">苏研助手</view>
-          <view class="weui-media-box__desc">公司内部一个小秘书微信小程序，可以提供展示公司新闻和公告，租房、二手买卖，图书借阅等功能。</view>
+          <view class="weui-media-box__desc">可以提供展示公司新闻和公告，可以查询助手获得公司常用信息，比如打印机设置、联系方式等。</view>
         </view>
       </view>
      

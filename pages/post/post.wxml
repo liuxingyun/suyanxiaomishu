@@ -11,12 +11,12 @@
     
     <view class="weui-btn-area">
       <navigator url="/pages/post-new/post-new">
-      <button class="weui-btn" form-type="submit" type="primary">发布帖子</button>
+      <button class="weui-btn" form-type="submit" type="primary">发布服务</button>
       </navigator>
     </view>
 
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">社区</view>
+      <view class="weui-panel__hd">服务列表</view>
       <view class="weui-panel__bd" wx:for="{{ postList }}" wx:key="{{ index }}">
         <navigator url="/pages/post-detail/post-detail?postId={{item.id}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
           <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
