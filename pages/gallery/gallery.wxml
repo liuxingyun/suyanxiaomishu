@@ -6,15 +6,15 @@
   <view class="page__bd_spacing">
     <form bindsubmit="submitGallery">
     
-      <view class="weui-cells weui-cells_after-title">
+      <!-- <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
           <view class="weui-cell__bd">
             <textarea class="weui-textarea" placeholder="这一刻的想法(可选)" style="height: 5em" name="description" />
             <view class="weui-textarea-counter">0/200</view>
           </view>
         </view>
-      </view>
-
+      </view> -->
+      <view class="weui-cells__title">公司印象图片</view>
       <view class="weui-uploader">
         <view class="weui-uploader__hd">
           

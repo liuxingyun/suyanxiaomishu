@@ -6,8 +6,6 @@ Page({
   },
 
   onLoad(options) {
-    console.log('onLoad');
-    var result=app.getUserInfo();
     
     this.setData({
       profile: app.getUserInfo()

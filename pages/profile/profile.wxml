@@ -14,10 +14,10 @@
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
       </navigator>
 
-      <navigator url="/pages/post-my/post-my" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <!-- <navigator url="/pages/post-my/post-my" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">我的服务</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-      </navigator>
+      </navigator> -->
       <navigator url="/pages/feedback/feedback" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">意见反馈</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>

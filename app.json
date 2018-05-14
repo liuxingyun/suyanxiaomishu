@@ -1,21 +1,21 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/post/post",
-    "pages/post-new/post-new",
-    "pages/post-detail/post-detail",
-    "pages/post-my/post-my",
     "pages/assistant/assistant",
     "pages/profile/profile",
     "pages/about/about",
     "pages/feedback/feedback",
     "pages/detail/detail",
-    "pages/gallery/gallery"
+    "pages/gallery/gallery",
+    "pages/post/post",
+    "pages/post-detail/post-detail",
+    "pages/post-new/post-new",
+    "pages/post-my/post-my"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "我的书架",
+    "navigationBarTitleText": "苏研助手",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -26,18 +26,20 @@
         "selectedIconPath": "icons/home_highlight.png",
         "text": "首页"
       },
-      {
-        "pagePath": "pages/post/post",
-        "iconPath": "icons/discuss.png",
-        "selectedIconPath": "icons/discuss_hover.png",
-        "text": "服务"
-      },
+      
       {
         "pagePath": "pages/assistant/assistant",
         "iconPath": "icons/assistant.png",
         "selectedIconPath": "icons/assistant_hover.png",
         "text": "助手"
       },
+      {
+        "pagePath": "pages/post/post",
+        "iconPath": "icons/discuss.png",
+        "selectedIconPath": "icons/discuss_hover.png",
+        "text": "服务"
+      },
+
       {
         "pagePath": "pages/profile/profile",
         "iconPath": "icons/setting.png",
